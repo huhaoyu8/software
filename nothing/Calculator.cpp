@@ -18,14 +18,14 @@ void Menu();
 
 bool Set() {
 	while (1) {
-		cout << "\t\tÇëÉèÖÃÊä³ö·½Ê½\n";
-		cout << "\t\t1.¼ÇÊÂ±¾Êä³ö\n";
-		cout << "\t\t2.ºÚ´°Êä³ö\n";
+		cout << "\t\tè¯·è®¾ç½®è¾“å‡ºæ–¹å¼\n";
+		cout << "\t\t1.è®°äº‹æœ¬è¾“å‡º\n";
+		cout << "\t\t2.é»‘çª—è¾“å‡º\n";
 		string option;
 		cin >> option;
 		if (option == "1")return false;
 		else if (option == "2")return true;
-		else cout << "Çë½öÊäÈëµ¥¸ö°¢À­²®Êı×Ö£¬ÖØÊÔÒ»ÏÂ" << endl, Sleep(1500), system("cls");
+		else cout << "è¯·ä»…è¾“å…¥å•ä¸ªé˜¿æ‹‰ä¼¯æ•°å­—ï¼Œé‡è¯•ä¸€ä¸‹" << endl, Sleep(1500), system("cls");
 	}
 }
 
@@ -38,11 +38,11 @@ void Show(vector<int>&a) {
 		}
 	}
 	else {
-		ofstream out("×ª»»ºó.txt");
+		ofstream out("è½¬æ¢å.txt");
 		for (auto it = a.begin(); it != a.end(); it++) {
 			out << *it;
 		}
-		cout << "Çëµ½¡°×ª»»ºó.txt¡±ÎÄ¼şÖĞ²é¿´";
+		cout << "è¯·åˆ°â€œè½¬æ¢å.txtâ€æ–‡ä»¶ä¸­æŸ¥çœ‹";
 	}
 }
 
@@ -154,15 +154,15 @@ void TranThem(string beg, string end, string str) {
 
 void TranNum() {
 	string beg, end, str;
-	do {		//¼à²âÊäÈëÊÇ·ñ´ï±ê
-		cout << "ÇëÊäÈëÔ­½øÖÆ(½öÊäÈë°¢À­²®Êı×Ö)" << endl;
+	do {		//ç›‘æµ‹è¾“å…¥æ˜¯å¦è¾¾æ ‡
+		cout << "è¯·è¾“å…¥åŸè¿›åˆ¶(ä»…è¾“å…¥é˜¿æ‹‰ä¼¯æ•°å­—)" << endl;
 		cin >> beg;
-		cout << "ÇëÊäÈëÄ¿±ê½øÖÆ(½öÊäÈë°¢À­²®Êı×Ö)" << endl;
+		cout << "è¯·è¾“å…¥ç›®æ ‡è¿›åˆ¶(ä»…è¾“å…¥é˜¿æ‹‰ä¼¯æ•°å­—)" << endl;
 		cin >> end;
-		cout << "ÇëÊäÈë×ª»»Êı(½öÊäÈë×Ö·û£¬ÎğÊäÈëÕı¸ººÅ)" << endl;
+		cout << "è¯·è¾“å…¥è½¬æ¢æ•°(ä»…è¾“å…¥å­—ç¬¦ï¼Œå‹¿è¾“å…¥æ­£è´Ÿå·)" << endl;
 		cin >> str;
 		if ((beg != "2" && beg != "8" && beg != "10" && beg != "16") || (end != "2" && end != "8" && end != "10" && end != "16")) {
-			cout << "ÇëÖØĞÂÊäÈë½øÖÆ(°¢À­²®Êı×Ö±íÊ¾)", Sleep(1500), system("cls");//ÖØĞÂÊäÈë
+			cout << "è¯·é‡æ–°è¾“å…¥è¿›åˆ¶(é˜¿æ‹‰ä¼¯æ•°å­—è¡¨ç¤º)", Sleep(1500), system("cls");//é‡æ–°è¾“å…¥
 		}
 		else break;
 	} while (1);
@@ -170,9 +170,9 @@ void TranNum() {
 		int num;
 		if (beg.size() > 1)num = (beg[0] - '0') * 10 + (beg[1] - '0');
 		else num = beg[0] - '0';
-		for (int i = 0; i < str.size(); i++) {	//¼à²âÊäÈëÊÇ·ñ´ï±ê
+		for (int i = 0; i < str.size(); i++) {	//ç›‘æµ‹è¾“å…¥æ˜¯å¦è¾¾æ ‡
 			if (!('0' <= str[i] && str[i] <= ('0' + num -1) && num != 16) && !(num == 16 && ((str[i] >= '0' && str[i] <= '9') || (str[i] >= 'A' && str[i] <= 'F')))) {
-				cout << "ÇëÖØĞÂÊäÈëÒª×ª»»Êı";
+				cout << "è¯·é‡æ–°è¾“å…¥è¦è½¬æ¢æ•°";
 				cin >> str;
 				i = -1;
 			}
@@ -226,16 +226,16 @@ void Menu() {
 	bool state = true;
 	string opt;
 	while (state) {
-		cout << "\t\t1.×ª»»\n";
-		cout << "\t\t2.ÉèÖÃ\n";
-		cout << "\t\t3.°ïÖú\n";
-		cout << "\t\t4.ÍË³ö\n";
+		cout << "\t\t1.è½¬æ¢\n";
+		cout << "\t\t2.è®¾ç½®\n";
+		cout << "\t\t3.å¸®åŠ©\n";
+		cout << "\t\t4.é€€å‡º\n";
 		cin >> opt;
 		if (opt.length() == 1 && opt[0] == '1')	TranNum();
 		else if (opt.length() == 1 && opt[0] == '2')Out = Set();
-		else if (opt.length() == 1 && opt[0] == '3')cout << "´Ë¼ÆËãÆ÷ÓÃÓÚ¶ş¡¢°Ë¡¢Ê®¡¢Ê®Áù¸÷½øÖÆµÄ×ª»»\n½öÖ§³ÖÔ¼5Ç§ÍòÎ»µÄÊ®½øÖÆ×ª»»\n";
+		else if (opt.length() == 1 && opt[0] == '3')cout << "æ­¤è®¡ç®—å™¨ç”¨äºäºŒã€å…«ã€åã€åå…­å„è¿›åˆ¶çš„è½¬æ¢\nä»…æ”¯æŒçº¦5åƒä¸‡ä½çš„åè¿›åˆ¶è½¬æ¢\n";
 		else if (opt.length() == 1 && opt[0] == '4')state = false;
-		else cout << "Çë½öÊäÈëµ¥¸ö°¢À­²®Êı×Ö£¬ÖØÊÔÒ»ÏÂ" << endl, Sleep(1500), system("cls");	//ÖØĞÂÊäÈë
+		else cout << "è¯·ä»…è¾“å…¥å•ä¸ªé˜¿æ‹‰ä¼¯æ•°å­—ï¼Œé‡è¯•ä¸€ä¸‹" << endl, Sleep(1500), system("cls");	//é‡æ–°è¾“å…¥
 	}
 }
 

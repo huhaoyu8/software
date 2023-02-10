@@ -119,6 +119,6 @@ void Widget::on_release_clicked(){
 
 void Widget::on_more_clicked()
 {
-    QMessageBox::information(NULL, "详情讯息", "加密模式：ECB\n填充方式：填充方式：PKCS7Padding\n邮箱：huhaoyu555@gmail.com\n链接：");
+    QMessageBox::information(NULL, "详情讯息", "加密模式：ECB\n填充方式：填充方式：PKCS7Padding\n邮箱：huhaoyu555@gmail.com\n链接：github.com/huhaoyu-Xeon/software");
 }
 

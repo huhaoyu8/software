@@ -1,2 +1,3 @@
 # software
-简单，好用。
+####AES,加密文本
+####NetPayCover,税前税后薪资转换

@@ -1,3 +1,3 @@
 # software
 #### AES,加密文本
-#### NetPayCover,税前税后薪资转换
+#### NetPayCover,税前税后薪资转换（bug，修改中）

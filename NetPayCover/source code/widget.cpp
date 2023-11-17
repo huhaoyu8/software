@@ -10,7 +10,6 @@ Widget::Widget(QWidget *parent)
 {
     ui->setupUi(this);
     ui->Lpercent->setFont(QFont("宋体",15));
-
     ui->SPension->setRange(0,30);
     ui->SPension->setSingleStep(1);
     ui->SPension->setValue(16);
@@ -120,6 +119,6 @@ void Widget::on_pushButton_clicked()
 
 void Widget::on_More_clicked()
 {
-    QMessageBox::information(NULL, "详情讯息", "邮箱：huhaoyu555@gmail.com\n链接：github.com/huhaoyu-Xeon/software");
+    QMessageBox::information(NULL,"详情讯息","<a href='https://github.com/huhaoyu8/software'>github.com/huhaoyu8/software</a><br/>邮箱：huhaoyu555@gmail.com");
 }
 
